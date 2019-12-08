@@ -7,7 +7,6 @@ from weapon import Weapon
 import time
 
 
-player = Player("George", "this is george", 100, 0, [], [], {}, "george_room")
 
 george_room = Room("george_room", "George's Room", "intro room", ["front_room", "upstairs_room"], None, None, "normal", None)
 
@@ -19,8 +18,9 @@ curts_room = Room("curts_room", "Curt's Room", "curts room", ["upstairs_room"], 
 
 kitchen_room = Room("kitchen_room", "Kitchen", "kitchen", ["front_room"], None, None, "normal", None)
 
+player = Player("George", "this is george", 100, 0, [], [], {}, george_room)
 
-room_list = [george_room, front_room, upstairs_room, kitchen_room, curts_room] 
+room_list = [george_room, front_room, upstairs_room, curts_room, kitchen_room] 
 
 
 xedi_list = ["x", "e", "d", "i", "p", "e", "x"]
@@ -51,10 +51,7 @@ def normal_room(room):
 	
 	while True:
 		user_input = input(">>> ")
-
-
-def get_room(room_name): 
-
+		
 
 def main():
 	title_screen(xedi_list)
